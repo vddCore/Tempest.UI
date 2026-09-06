@@ -1,0 +1,13 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="clr-namespace:Tempest.UI;assembly=Tempest.UI"
+             x:Class="Tempest.UI.Example.App"
+             RequestedThemeVariant="Default">
+    <Application.Resources>
+        <ui:TempestUI />
+    </Application.Resources>
+    
+    <Application.Styles>
+        
+    </Application.Styles>
+</Application>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Avalonia.Desktop" Version="12.1.2" />
+      <PackageReference Include="Avalonia.Wayland" Version="12.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="TempestUI.cs">
+        <DependentUpon>Tempest.UI.axaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controls\" />
+    </ItemGroup>
+
+</Project>

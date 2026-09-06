@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tempest.UI.Example", "Tempest.UI.Example\Tempest.UI.Example.csproj", "{8AC12554-3F27-45D2-943C-B908DFF7BF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tempest.UI", "Tempest.UI\Tempest.UI.csproj", "{06C09FF8-3735-4F21-8AE2-AF1A442F175E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AC12554-3F27-45D2-943C-B908DFF7BF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC12554-3F27-45D2-943C-B908DFF7BF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC12554-3F27-45D2-943C-B908DFF7BF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC12554-3F27-45D2-943C-B908DFF7BF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06C09FF8-3735-4F21-8AE2-AF1A442F175E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C09FF8-3735-4F21-8AE2-AF1A442F175E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C09FF8-3735-4F21-8AE2-AF1A442F175E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C09FF8-3735-4F21-8AE2-AF1A442F175E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
