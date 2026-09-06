@@ -32,6 +32,65 @@
                                               ContentTemplate="{TemplateBinding ContentTemplate}" />
                         </Grid>
                     </Border>
+
+                    <Panel Name="PART_ResizeHandleContainer"
+                           IsVisible="False">
+                        <Border Name="PART_ResizeLeft"
+                                Width="3"
+                                HorizontalAlignment="Left"
+                                Cursor="LeftSide" 
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeTopLeft"
+                                Width="6"
+                                Height="6"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top"
+                                Cursor="TopLeftCorner"
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeTop"
+                                Height="3"
+                                VerticalAlignment="Top"
+                                Cursor="TopSide"
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeTopRight"
+                                Width="6"
+                                Height="6"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Right"
+                                Cursor="TopRightCorner"
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeRight"
+                                Width="3"
+                                HorizontalAlignment="Right"
+                                Cursor="RightSide"
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeBottomRight"
+                                Width="6"
+                                Height="6"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                Cursor="BottomRightCorner" 
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeBottom"
+                                Height="3"
+                                VerticalAlignment="Bottom"
+                                Cursor="BottomSide"
+                                Background="Transparent" />
+                        
+                        <Border Name="PART_ResizeBottomLeft"
+                                Height="6"
+                                Width="6"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Bottom"
+                                Cursor="BottomLeftCorner" 
+                                Background="Transparent" />
+                    </Panel>
                 </Panel>
             </ControlTemplate>
         </Setter>
@@ -40,6 +99,14 @@
             <Setter Property="BorderThickness" Value="1" />
             <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Border}" />
             <Setter Property="CornerRadius" Value="{DynamicResource Breeze::Global.Window.BorderOnlyCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^:borderonly /template/ Panel#PART_ResizeHandleContainer">
+            <Setter Property="IsVisible" Value="True" />
+        </Style>
+        
+        <Style Selector="^:borderonly:noresize /template/ Panel#PART_ResizeHandleContainer">
+            <Setter Property="IsVisible" Value="False" />
         </Style>
 
         <Style Selector="^:maximized /template/ Border#PART_RootBorder">

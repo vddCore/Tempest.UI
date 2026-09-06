@@ -6,6 +6,8 @@
         <ResourceInclude Source="Assets/Global.axaml" />
         
         <ResourceInclude Source="Controls/PlasmaWindow.axaml" />
+        
+        <ResourceInclude Source="Controls/GroupBox.axaml" />
         <ResourceInclude Source="Controls/Button.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

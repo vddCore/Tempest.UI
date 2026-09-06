@@ -1,0 +1,54 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTheme x:Key="{x:Type GroupBox}" TargetType="GroupBox">
+        <Setter Property="Padding" Value="6,0,6,6" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Breeze::Global.GroupBox.CornerRadius}" />
+        <Setter Property="BorderThickness" Value="{DynamicResource Breeze::Global.GroupBox.BorderThickness}" />
+        
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Border}" />
+        <Setter Property="Foreground" Value="{DynamicResource Breeze::Window.ForegroundNormal}" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid RowDefinitions="Auto,*">
+                    <Border Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Margin="0,8,0,0"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}" />
+
+                    <Border Grid.Row="0"
+                            HorizontalAlignment="Left"
+                            Margin="4,0,0,0"
+                            Padding="{DynamicResource Breeze::Global.GroupBox.HeaderPadding}"
+                            Background="{DynamicResource Breeze::Window.BackgroundNormal}">
+                        <ContentPresenter Name="PART_HeaderPresenter"
+                                          Content="{TemplateBinding Header}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                          Foreground="{DynamicResource Breeze::Window.ForegroundNormal}" 
+                                          FontSize="{DynamicResource Breeze::Global.GroupBox.HeaderFontSize}" />
+                    </Border>
+
+                    <ContentPresenter Name="PART_ContentPresenter"
+                                      Grid.Row="1"
+                                      Margin="{TemplateBinding Padding}"
+                                      HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{DynamicResource Breeze::Global.Shared.DisabledControlOpacity}" />
+        </Style>
+
+        <Style Selector="^[Header={x:Null}] /template/ Border">
+            <Setter Property="IsVisible" Value="False" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

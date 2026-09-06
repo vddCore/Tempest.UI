@@ -1,17 +1,22 @@
-<kde:PlasmaWindow xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:kde="clr-namespace:Tempest.UI.Controls;assembly=Tempest.UI"
-        MinHeight="0"
-        MinWidth="0"
-        x:Class="Tempest.UI.Example.MainWindow"
-        WindowDecorations="Full"
-        Title="Tempest.UI.Example">
-    <StackPanel Spacing="4"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-        <Button Content="Hello, world!" />
-        
-        <Button Content="Hello, world!"
-                IsEnabled="False" />
-    </StackPanel>
+<kde:PlasmaWindow x:Class="Tempest.UI.Example.MainWindow"
+                  xmlns="https://github.com/avaloniaui"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:kde="clr-namespace:Tempest.UI.Controls;assembly=Tempest.UI"
+                  MinHeight="0"
+                  MinWidth="0"
+                  Title="Tempest UI Demonstration Program"
+                  WindowDecorations="Full">
+    <Grid Margin="6,2,6,6">
+        <GroupBox Header="Buttons"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+            <StackPanel Spacing="4"
+                        Orientation="Horizontal">
+                <Button Content="Normal" />
+
+                <Button Content="Disabled"
+                        IsEnabled="False" />
+            </StackPanel>
+        </GroupBox>
+    </Grid>
 </kde:PlasmaWindow>

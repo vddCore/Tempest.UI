@@ -1,12 +1,12 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
-        <Setter Property="MinHeight" Value="30" />
-        <Setter Property="MinWidth" Value="75" />
-        <Setter Property="Padding" Value="12,4" />
+        <Setter Property="MinHeight" Value="{DynamicResource Breeze::Global.Button.MinHeight}" />
+        <Setter Property="MinWidth" Value="{DynamicResource Breeze::Global.Button.MinWidth}" />
+        <Setter Property="Padding" Value="{DynamicResource Breeze::Global.Button.Padding}" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Breeze::Global.Button.CornerRadius}" />
         <Setter Property="BorderThickness" Value="1" />
 
         <Setter Property="Background" Value="{DynamicResource Breeze::Button.BackgroundNormal}" />
@@ -51,7 +51,7 @@
         </Style>
 
         <Style Selector="^:disabled">
-            <Setter Property="Opacity" Value="0.3" />
+            <Setter Property="Opacity" Value="{DynamicResource Breeze::Global.Shared.DisabledControlOpacity}" />
         </Style>
     </ControlTheme>
 </ResourceDictionary>
