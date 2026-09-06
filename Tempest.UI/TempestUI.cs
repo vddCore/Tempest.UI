@@ -7,7 +7,7 @@ using Tempest.UI.Infrastructure.Plasma;
 
 public class TempestUI : ResourceDictionary
 {
-    private PlasmaGlobalConfigWatcher? _globalConfigWatcher;
+    private PlasmaConfigWatcher? _globalConfigWatcher;
     
     public TempestUI()
     {        
@@ -18,7 +18,7 @@ public class TempestUI : ResourceDictionary
 
     private void InitializeConfigWatcher()
     {
-        _globalConfigWatcher = new PlasmaGlobalConfigWatcher(
+        _globalConfigWatcher = new PlasmaConfigWatcher(
             Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
                 ".config",

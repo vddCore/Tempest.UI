@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Tempest.UI.Infrastructure.Persistence;
 
-internal class PlasmaGlobalConfigWatcher : IDisposable
+internal class PlasmaConfigWatcher : IDisposable
 {
     private readonly Lock _lock = new();
     
@@ -20,7 +20,7 @@ internal class PlasmaGlobalConfigWatcher : IDisposable
     private KConfigFile? _kdeGlobalConfig;
     private bool _disposed;
 
-    public PlasmaGlobalConfigWatcher(string targetFilePath)
+    public PlasmaConfigWatcher(string targetFilePath)
     {
         if (!File.Exists(targetFilePath))
         {
