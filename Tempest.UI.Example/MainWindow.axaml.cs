@@ -1,8 +1,8 @@
-using Avalonia.Controls;
-
 namespace Tempest.UI.Example;
 
-public partial class MainWindow : Window
+using Tempest.UI.Controls;
+
+public partial class MainWindow : PlasmaWindow
 {
     public MainWindow()
     {

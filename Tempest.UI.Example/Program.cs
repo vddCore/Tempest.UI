@@ -18,5 +18,6 @@ internal class Program
             .WithDeveloperTools()
 #endif
             .WithInterFont()
+            .UseTempestUI()
             .LogToTrace();
 }

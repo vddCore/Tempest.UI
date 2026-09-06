@@ -1,13 +1,14 @@
 namespace Tempest.UI.Infrastructure.Persistence;
 
-using System.Text.RegularExpressions;
-
 internal class KConfigFile
 {
-    private readonly Dictionary<string, Dictionary<string, string>> _sections = 
+    private readonly Dictionary<string, Dictionary<string, string>> _sections =
         new(StringComparer.OrdinalIgnoreCase);
-    
+
     private readonly string _filePath;
+
+    public Dictionary<string, string>? this[string sectionName]
+        => _sections.GetValueOrDefault(sectionName);
 
     public KConfigFile(string filePath)
     {
@@ -15,13 +16,16 @@ internal class KConfigFile
         ParseIniFile();
     }
 
+    public List<string> GetSections()
+        => [.._sections.Keys];
+
     public string? GetValue(string sectionName, string key)
     {
         if (_sections.TryGetValue(sectionName, out var section))
         {
             return section.GetValueOrDefault(key);
         }
-        
+
         return null;
     }
 
@@ -30,12 +34,12 @@ internal class KConfigFile
         if (!File.Exists(_filePath)) return;
 
         using var fs = new FileStream(
-            _filePath, 
-            FileMode.Open, 
+            _filePath,
+            FileMode.Open,
             FileAccess.Read,
             FileShare.ReadWrite
         );
-        
+
         using var sr = new StreamReader(fs);
 
         var currentSection = string.Empty;
@@ -44,7 +48,9 @@ internal class KConfigFile
             var line = rawLine.Trim();
 
             if (string.IsNullOrWhiteSpace(line) || line.StartsWith(';') || line.StartsWith('#'))
+            {
                 continue;
+            }
 
             if (line.StartsWith('[') && line.EndsWith(']'))
             {
@@ -53,6 +59,7 @@ internal class KConfigFile
                 {
                     _sections[currentSection] = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
                 }
+
                 continue;
             }
 

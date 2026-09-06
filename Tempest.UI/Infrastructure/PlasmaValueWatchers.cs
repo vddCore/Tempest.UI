@@ -1,6 +1,5 @@
 namespace Tempest.UI.Infrastructure;
 
-using System.Diagnostics;
 using Avalonia;
 using Avalonia.Media;
 
@@ -13,10 +12,17 @@ internal static class PlasmaValueWatchers
         var green = byte.Parse(colorValues[1]);
         var blue = byte.Parse(colorValues[2]);
 
-        Application.Current!.Resources["Breeze_Shared_AccentColor"] = new SolidColorBrush(
-            Color.FromArgb(255, red, green, blue)
-        );
-        
-        Debug.WriteLine($"Accent color set to {value}");
+        Avalonia.Threading.Dispatcher.UIThread.Post(() =>
+        {
+            if (Application.Current is null) return;
+
+            var res = Application.Current.Resources;
+            res["Breeze::Shared.Accent"] = new SolidColorBrush(Color.FromArgb(255, red, green, blue));
+            res["Breeze::Shared.Accent.100"] = new SolidColorBrush(Color.FromArgb(255, red, green, blue));
+            res["Breeze::Shared.Accent.80"]  = new SolidColorBrush(Color.FromArgb(204, red, green, blue));
+            res["Breeze::Shared.Accent.60"]  = new SolidColorBrush(Color.FromArgb(153, red, green, blue));
+            res["Breeze::Shared.Accent.40"]  = new SolidColorBrush(Color.FromArgb(102, red, green, blue));
+            res["Breeze::Shared.Accent.20"]  = new SolidColorBrush(Color.FromArgb(51, red, green, blue));
+        });
     }
 }

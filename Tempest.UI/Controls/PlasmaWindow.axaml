@@ -1,0 +1,55 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="clr-namespace:Tempest.UI.Controls">
+    <ControlTheme x:Key="{x:Type controls:PlasmaWindow}" TargetType="controls:PlasmaWindow">
+        <Setter Property="Background" Value="{DynamicResource Breeze::Window.BackgroundNormal}" />
+        <Setter Property="Foreground" Value="{DynamicResource Breeze::Window.ForegroundNormal}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.BorderBrush}" />
+        
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_TransparencyFallback" IsHitTestVisible="False" />
+
+                    <Border Name="PART_RootBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        
+                        <Grid RowDefinitions="Auto,*">
+                            <Grid Name="PART_TitleBar" 
+                                  Grid.Row="0" 
+                                  IsVisible="{TemplateBinding ExtendClientAreaToDecorationsHint}">
+                            </Grid>
+
+                            <ContentPresenter Name="PART_ContentPresenter"
+                                              Grid.Row="1"
+                                              Margin="{TemplateBinding Padding}"
+                                              HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        </Grid>
+                    </Border>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^:borderonly /template/ Border#PART_RootBorder">
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Border}" />
+            <Setter Property="CornerRadius" Value="{DynamicResource Breeze::Global.Window.BorderOnlyCornerRadius}" />
+        </Style>
+
+        <Style Selector="^:maximized /template/ Border#PART_RootBorder">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="CornerRadius" Value="0" />
+        </Style>
+
+        <Style Selector="^:fullscreen /template/ Border#PART_RootBorder">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="CornerRadius" Value="0" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

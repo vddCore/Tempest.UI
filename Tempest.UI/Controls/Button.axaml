@@ -1,0 +1,57 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="MinWidth" Value="75" />
+        <Setter Property="Padding" Value="12,4" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderThickness" Value="1" />
+
+        <Setter Property="Background" Value="{DynamicResource Breeze::Button.BackgroundNormal}" />
+        <Setter Property="Foreground" Value="{DynamicResource Breeze::Button.ForegroundNormal}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Border}" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_RootBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}">
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          Padding="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"
+                                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:focus">
+            <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Accent.40}" />
+        </Style>
+        
+        <Style Selector="^:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Accent.60}" />
+        </Style>
+        
+        <Style Selector="^:focus:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Accent.60}" />
+        </Style>
+
+        <Style Selector="^:pressed">
+            <Setter Property="Background" Value="{DynamicResource Breeze::Shared.Accent.20}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Accent.60}" />
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="0.3" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

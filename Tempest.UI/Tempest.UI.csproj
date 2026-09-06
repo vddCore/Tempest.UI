@@ -15,10 +15,9 @@
       <Compile Update="TempestUI.cs">
         <DependentUpon>Tempest.UI.axaml</DependentUpon>
       </Compile>
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controls\" />
+      <Compile Update="Controls\PlasmaWindow.cs">
+        <DependentUpon>PlasmaWindow.axaml</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

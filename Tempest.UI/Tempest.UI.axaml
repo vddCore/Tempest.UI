@@ -2,7 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     x:Class="Tempest.UI.TempestUI">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceInclude Source="Assets/Colors.Modern.axaml" />
+        <!-- See TempestUI.cs for theme variant management logic. -->
         <ResourceInclude Source="Assets/Global.axaml" />
+        
+        <ResourceInclude Source="Controls/PlasmaWindow.axaml" />
+        <ResourceInclude Source="Controls/Button.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

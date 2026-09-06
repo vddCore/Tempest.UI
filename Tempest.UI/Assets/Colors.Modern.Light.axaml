@@ -1,0 +1,136 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="Breeze::Shared.Border" Color="#54575A" />
+    <SolidColorBrush x:Key="Breeze::Shared.Disabled" Color="#383838" />
+    <SolidColorBrush x:Key="Breeze::Shared.Inactive" Color="#706F6E" />
+    
+    <SolidColorBrush x:Key="Breeze::Button.BackgroundAlternate" Color="#1E5774" />
+    <SolidColorBrush x:Key="Breeze::Button.BackgroundNormal" Color="#31363B" />
+    <SolidColorBrush x:Key="Breeze::Button.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Button.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundActive" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundLink" Color="#1D99F3" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundNegative" Color="#DA4453" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundNeutral" Color="#F67400" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundPositive" Color="#27AE60" />
+    <SolidColorBrush x:Key="Breeze::Button.ForegroundVisited" Color="#9B59B6" />
+    
+    <SolidColorBrush x:Key="Breeze::Complementary.BackgroundAlternate" Color="#1E5774" />
+    <SolidColorBrush x:Key="Breeze::Complementary.BackgroundNormal" Color="#2A2E32" />
+    <SolidColorBrush x:Key="Breeze::Complementary.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Complementary.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundActive" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundLink" Color="#1D99F3" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundNegative" Color="#DA4453" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundNeutral" Color="#F67400" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundNormal" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundPositive" Color="#27AE60" />
+    <SolidColorBrush x:Key="Breeze::Complementary.ForegroundVisited" Color="#9B59B6" />
+    
+    <SolidColorBrush x:Key="Breeze::Selection.BackgroundAlternate" Color="#1E5774" />
+    <SolidColorBrush x:Key="Breeze::Selection.BackgroundNormal" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Selection.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Selection.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundActive" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundLink" Color="#FDBC4B" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundNegative" Color="#B03745" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundNeutral" Color="#C65C00" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundNormal" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundPositive" Color="#176839" />
+    <SolidColorBrush x:Key="Breeze::Selection.ForegroundVisited" Color="#9B59B6" />
+    
+    <SolidColorBrush x:Key="Breeze::Tooltip.BackgroundAlternate" Color="#2A2E32" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.BackgroundNormal" Color="#31363B" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundActive" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundLink" Color="#1D99F3" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundNegative" Color="#DA4453" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundNeutral" Color="#F67400" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundNormal" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundPositive" Color="#27AE60" />
+    <SolidColorBrush x:Key="Breeze::Tooltip.ForegroundVisited" Color="#9B59B6" />
+    
+    <SolidColorBrush x:Key="Breeze::View.BackgroundAlternate" Color="#232629" />
+    <SolidColorBrush x:Key="Breeze::View.BackgroundNormal" Color="#1B1E20" />
+    <SolidColorBrush x:Key="Breeze::View.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::View.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundActive" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundLink" Color="#1D99F3" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundNegative" Color="#DA4453" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundNeutral" Color="#F67400" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundNormal" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundPositive" Color="#27AE60" />
+    <SolidColorBrush x:Key="Breeze::View.ForegroundVisited" Color="#9B59B6" />
+    
+    <SolidColorBrush x:Key="Breeze::Window.BackgroundAlternate" Color="#31363B" />
+    <SolidColorBrush x:Key="Breeze::Window.BackgroundNormal" Color="#2A2E32" />
+    <SolidColorBrush x:Key="Breeze::Window.DecorationFocus" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Window.DecorationHover" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundActive" Color="#3DAEE9" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundInactive" Color="#A1A9B1" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundLink" Color="#1D99F3" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundNegative" Color="#DA4453" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundNeutral" Color="#F67400" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundNormal" Color="#FCFCFC" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundPositive" Color="#27AE60" />
+    <SolidColorBrush x:Key="Breeze::Window.ForegroundVisited" Color="#9B59B6" />
+</ResourceDictionary>
+
+<!--
+
+
+[ColorEffects:Disabled]
+Color=
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=#
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+
+
+
+
+
+
+
+
+
+
+
+
+[General]
+ColorScheme=BreezeClassicDark
+Name=Breeze Classic Dark
+shadeSortColumn=true
+
+[KDE]
+contrast=4
+
+[WM]
+activeBackground=#2A2E32
+activeBlend=#FCFCFC
+activeForeground=#FCFCFC
+inactiveBackground=#2A2E32
+inactiveBlend=#A1A9B1
+inactiveForeground=#A1A9B1
+
+-->
