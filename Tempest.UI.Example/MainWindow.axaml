@@ -5,9 +5,12 @@
                   MinHeight="0"
                   MinWidth="0"
                   Title="Tempest UI Demonstration Program"
+                  SizeToContent="Width"
                   WindowDecorations="Full">
-    <Grid Margin="6,2,6,6">
-        <GroupBox Header="Buttons"
+    <Grid Margin="6,2,6,6"
+          ColumnDefinitions="Auto,Auto,Auto">
+        <GroupBox Grid.Column="0"
+                  Header="Regular buttons"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top">
             <StackPanel Spacing="4">
@@ -20,12 +23,125 @@
 
                     <ToggleButton Content="Toggle" />
                 </StackPanel>
-                
+
                 <StackPanel Spacing="4"
                             Orientation="Horizontal">
                     <SplitButton Content="Split"
                                  HorizontalAlignment="Left" />
                 </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1"
+                  Margin="6,0,0,0"
+                  Header="Radio buttons"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+            <StackPanel Spacing="4">
+                <RadioButton>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 1" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 1"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </RadioButton>
+
+                <RadioButton>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 2" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 2"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </RadioButton>
+
+                <RadioButton>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 3" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 3"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </RadioButton>
+
+                <RadioButton IsEnabled="False">
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 4" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="This option is disabled"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </RadioButton>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Grid.Column="2"
+                  Margin="6,0,0,0"
+                  Header="Checkboxes"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top">
+            <StackPanel Spacing="4">
+                <CheckBox>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 1" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 1"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </CheckBox>
+
+                <CheckBox>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 2" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 2"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </CheckBox>
+
+                <CheckBox>
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 3" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="Description of Option 3"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </CheckBox>
+
+                <CheckBox IsEnabled="False"
+                          IsChecked="{x:Null}">
+                    <Grid RowDefinitions="Auto,Auto">
+                        <TextBlock Grid.Row="0"
+                                   Text="Option 4" />
+
+                        <TextBlock Grid.Row="1"
+                                   Text="This option is disabled"
+                                   FontSize="11"
+                                   Opacity="0.6" />
+                    </Grid>
+                </CheckBox>
             </StackPanel>
         </GroupBox>
     </Grid>

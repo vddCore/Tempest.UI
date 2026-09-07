@@ -7,9 +7,12 @@
         
         <ResourceInclude Source="Controls/PlasmaWindow.axaml" />
         
+        <ResourceInclude Source="Controls/CheckBox.axaml" />
         <ResourceInclude Source="Controls/GroupBox.axaml" />
+
         <ResourceInclude Source="Controls/Button.axaml" />
-        <ResourceInclude Source="Controls/ToggleButton.axaml" />
+        <ResourceInclude Source="Controls/RadioButton.axaml" />
         <ResourceInclude Source="Controls/SplitButton.axaml" />
+        <ResourceInclude Source="Controls/ToggleButton.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
