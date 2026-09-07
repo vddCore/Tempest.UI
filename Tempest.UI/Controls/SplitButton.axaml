@@ -1,0 +1,192 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ControlTheme x:Key="{x:Type SplitButton}" TargetType="SplitButton">
+        <Setter Property="MinHeight" Value="{DynamicResource Breeze::Global.Button.MinHeight}" />
+        <Setter Property="MinWidth" Value="{DynamicResource Breeze::Global.Button.MinWidth}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="{DynamicResource Breeze::Global.Button.CornerRadius}" />
+        <Setter Property="BorderThickness" Value="1" />
+
+        <Setter Property="Background" Value="{DynamicResource Breeze::Button.BackgroundNormal}" />
+        <Setter Property="Foreground" Value="{DynamicResource Breeze::Button.ForegroundNormal}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource Breeze::Shared.Border}" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_RootBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}" />
+
+                    <Border Name="PART_FocusBorder"
+                            BorderBrush="{DynamicResource Breeze::Shared.Accent.40}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Opacity="0"
+                            IsHitTestVisible="False">
+                        <Border.Transitions>
+                            <Transitions>
+                                <DoubleTransition Property="Opacity"
+                                                  Duration="0:0:0.150"
+                                                  Easing="CubicEaseOut" />
+                            </Transitions>
+                        </Border.Transitions>
+                    </Border>
+
+                    <Border Name="PART_HoverBorder"
+                            BorderBrush="{DynamicResource Breeze::Shared.Accent.60}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Opacity="0"
+                            IsHitTestVisible="False">
+                        <Border.Transitions>
+                            <Transitions>
+                                <DoubleTransition Property="Opacity"
+                                                  Duration="0:0:0.150"
+                                                  Easing="CubicEaseOut" />
+                            </Transitions>
+                        </Border.Transitions>
+                    </Border>
+
+                    <Border CornerRadius="{TemplateBinding CornerRadius}" ClipToBounds="True">
+                        <Grid ColumnDefinitions="*,Auto,Auto">
+                            <Border Name="PART_PrimaryHoverOverlay"
+                                    Grid.Column="0"
+                                    Background="{DynamicResource Breeze::Shared.Accent.20}"
+                                    Opacity="0"
+                                    IsHitTestVisible="False">
+                                <Border.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition Property="Opacity"
+                                                          Duration="0:0:0.150"
+                                                          Easing="CubicEaseOut" />
+                                    </Transitions>
+                                </Border.Transitions>
+                            </Border>
+
+                            <Border Name="PART_PrimaryPressedOverlay"
+                                    Grid.Column="0"
+                                    Background="{DynamicResource Breeze::Shared.Accent.40}"
+                                    Opacity="0"
+                                    IsHitTestVisible="False">
+                                <Border.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition Property="Opacity"
+                                                          Duration="0:0:0.100"
+                                                          Easing="CubicEaseOut" />
+                                    </Transitions>
+                                </Border.Transitions>
+                            </Border>
+
+                            <Border Name="PART_SecondaryHoverOverlay"
+                                    Grid.Column="2"
+                                    Background="{DynamicResource Breeze::Shared.Accent.20}"
+                                    Opacity="0"
+                                    IsHitTestVisible="False">
+                                <Border.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition Property="Opacity"
+                                                          Duration="0:0:0.150"
+                                                          Easing="CubicEaseOut" />
+                                    </Transitions>
+                                </Border.Transitions>
+                            </Border>
+
+                            <Border Name="PART_SecondaryPressedOverlay"
+                                    Grid.Column="2"
+                                    Background="{DynamicResource Breeze::Shared.Accent.40}"
+                                    Opacity="0"
+                                    IsHitTestVisible="False">
+                                <Border.Transitions>
+                                    <Transitions>
+                                        <DoubleTransition Property="Opacity"
+                                                          Duration="0:0:0.100"
+                                                          Easing="CubicEaseOut" />
+                                    </Transitions>
+                                </Border.Transitions>
+                            </Border>
+
+                            <Button Name="PART_PrimaryButton"
+                                    Grid.Column="0"
+                                    MinWidth="0"
+                                    MinHeight="0"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Command="{TemplateBinding Command}"
+                                    CommandParameter="{TemplateBinding CommandParameter}">
+                                <ContentPresenter Name="PART_ContentPresenter"
+                                                  Content="{TemplateBinding Content}"
+                                                  ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                  Padding="{TemplateBinding Padding}"
+                                                  RecognizesAccessKey="True"
+                                                  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Button>
+
+                            <Rectangle Grid.Column="1"
+                                       Margin="0,1"
+                                       Width="1"
+                                       VerticalAlignment="Stretch"
+                                       Fill="{TemplateBinding BorderBrush}"
+                                       Opacity="0.6"
+                                       IsHitTestVisible="False" />
+
+                            <Button Name="PART_SecondaryButton"
+                                    Grid.Column="2"
+                                    Padding="4,0"
+                                    MinWidth="0"
+                                    Width="{DynamicResource Breeze::Global.SplitButton.SecondaryWidth}"
+                                    Background="Transparent"
+                                    BorderThickness="0"
+                                    Foreground="{TemplateBinding Foreground}">
+                                <Path Width="8"
+                                      Height="5"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      Data="{DynamicResource Breeze::Global.SplitButton.SecondaryChevronPath}"
+                                      Stroke="{TemplateBinding Foreground}"
+                                      StrokeThickness="1.2"
+                                      StrokeLineCap="Round"
+                                      StrokeJoin="Round"
+                                      IsHitTestVisible="False" />
+                            </Button>
+                        </Grid>
+                    </Border>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:focus-within /template/ Border#PART_FocusBorder">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:pointerover /template/ Border#PART_HoverBorder">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:has-primary-pointerover /template/ Border#PART_PrimaryHoverOverlay">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+        <Style Selector="^:has-primary-pressed /template/ Border#PART_PrimaryPressedOverlay">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:has-secondary-pointerover /template/ Border#PART_SecondaryHoverOverlay">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+        <Style Selector="^:has-secondary-pressed /template/ Border#PART_SecondaryPressedOverlay">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+        <Style Selector="^:flyout-open /template/ Border#PART_SecondaryPressedOverlay">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{DynamicResource Breeze::Global.Shared.DisabledControlOpacity}" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

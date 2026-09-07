@@ -1,6 +1,6 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <SolidColorBrush x:Key="Breeze::Shared.Border" Color="#3AFFFFFF" />
+    <SolidColorBrush x:Key="Breeze::Shared.Border" Color="#54575A" />
     <SolidColorBrush x:Key="Breeze::Shared.Disabled" Color="#383838" />
     <SolidColorBrush x:Key="Breeze::Shared.Inactive" Color="#706F6E" />
     

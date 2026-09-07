@@ -10,12 +10,22 @@
         <GroupBox Header="Buttons"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top">
-            <StackPanel Spacing="4"
-                        Orientation="Horizontal">
-                <Button Content="Normal" />
+            <StackPanel Spacing="4">
+                <StackPanel Spacing="4"
+                            Orientation="Horizontal">
+                    <Button Content="Normal" />
 
-                <Button Content="Disabled"
-                        IsEnabled="False" />
+                    <Button Content="Disabled"
+                            IsEnabled="False" />
+
+                    <ToggleButton Content="Toggle" />
+                </StackPanel>
+                
+                <StackPanel Spacing="4"
+                            Orientation="Horizontal">
+                    <SplitButton Content="Split"
+                                 HorizontalAlignment="Left" />
+                </StackPanel>
             </StackPanel>
         </GroupBox>
     </Grid>

@@ -1,6 +1,6 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
+<ControlTheme x:Key="{x:Type ToggleButton}" TargetType="ToggleButton">
         <Setter Property="MinHeight" Value="{DynamicResource Breeze::Global.Button.MinHeight}" />
         <Setter Property="MinWidth" Value="{DynamicResource Breeze::Global.Button.MinWidth}" />
         <Setter Property="Padding" Value="{DynamicResource Breeze::Global.Button.Padding}" />
@@ -21,6 +21,22 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{TemplateBinding CornerRadius}" />
+
+                    <Border Name="PART_CheckedBorder"
+                            Background="{DynamicResource Breeze::Shared.Accent.20}"
+                            BorderBrush="{DynamicResource Breeze::Shared.Accent.60}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Opacity="0"
+                            IsHitTestVisible="False">
+                        <Border.Transitions>
+                            <Transitions>
+                                <DoubleTransition Property="Opacity"
+                                                  Duration="0:0:0.150"
+                                                  Easing="CubicEaseOut" />
+                            </Transitions>
+                        </Border.Transitions>
+                    </Border>
 
                     <Border Name="PART_FocusBorder"
                             BorderBrush="{DynamicResource Breeze::Shared.Accent.40}"
@@ -53,7 +69,7 @@
                     </Border>
 
                     <Border Name="PART_PressedBorder"
-                            Background="{DynamicResource Breeze::Shared.Accent.20}"
+                            Background="{DynamicResource Breeze::Shared.Accent.40}"
                             BorderBrush="{DynamicResource Breeze::Shared.Accent.60}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{TemplateBinding CornerRadius}"
@@ -79,6 +95,14 @@
             </ControlTemplate>
         </Setter>
 
+        <Style Selector="^:checked /template/ Border#PART_CheckedBorder">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:indeterminate /template/ Border#PART_CheckedBorder">
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+
         <Style Selector="^:focus /template/ Border#PART_FocusBorder">
             <Setter Property="Opacity" Value="1" />
         </Style>
@@ -86,7 +110,6 @@
         <Style Selector="^:pointerover /template/ Border#PART_HoverBorder">
             <Setter Property="Opacity" Value="1" />
         </Style>
-
         <Style Selector="^:focus:pointerover /template/ Border#PART_HoverBorder">
             <Setter Property="Opacity" Value="1" />
         </Style>

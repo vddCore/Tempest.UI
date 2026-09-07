@@ -9,5 +9,7 @@
         
         <ResourceInclude Source="Controls/GroupBox.axaml" />
         <ResourceInclude Source="Controls/Button.axaml" />
+        <ResourceInclude Source="Controls/ToggleButton.axaml" />
+        <ResourceInclude Source="Controls/SplitButton.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
