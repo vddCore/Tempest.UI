@@ -29,7 +29,7 @@
     <Geometry x:Key="Breeze::Global.SplitButton.SecondaryChevronPath">M 0 0 L 4 4 L 8 0</Geometry>
 
     <x:Double x:Key="Breeze::Global.ProgressBar.Horizontal.Height">6</x:Double>
-    <CornerRadius x:Key="Breeze::Global.ProgressBar.Horizontal.MinWidth">100</CornerRadius>
+    <x:Double x:Key="Breeze::Global.ProgressBar.Horizontal.MinWidth">100</x:Double>
     <LinearGradientBrush x:Key="Breeze::Global.ProgressBar.Horizontal.IndeterminateBrush" 
                          StartPoint="0,0"
                          EndPoint="28,0"
