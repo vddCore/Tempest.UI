@@ -2,6 +2,9 @@
 
 using System;
 using Avalonia;
+using Avalonia.OpenGL.Egl;
+using Avalonia.Rendering.Composition;
+using AvaloniaUI.DiagnosticsSupport;
 
 internal class Program
 {
@@ -11,7 +14,7 @@ internal class Program
 
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>()
-            .UseWayland()
+            .UsePlatformDetect()
             .UseSkia()
             .UseHarfBuzz()
 #if DEBUG

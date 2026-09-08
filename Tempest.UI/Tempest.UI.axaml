@@ -14,5 +14,7 @@
         <ResourceInclude Source="Controls/RadioButton.axaml" />
         <ResourceInclude Source="Controls/SplitButton.axaml" />
         <ResourceInclude Source="Controls/ToggleButton.axaml" />
+        
+        <ResourceInclude Source="Controls/ProgressBar.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
