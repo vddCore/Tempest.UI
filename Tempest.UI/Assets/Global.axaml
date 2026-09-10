@@ -52,5 +52,34 @@
     </LinearGradientBrush>
     <CornerRadius x:Key="Breeze::Global.ProgressBar.CornerRadius">3</CornerRadius>
     
+    <CornerRadius x:Key="Breeze::Global.TabControl.ContentArea.Left.CornerRadius">0,4,4,4</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.ContentArea.Top.CornerRadius">0,4,4,4</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.ContentArea.Right.CornerRadius">4,0,4,4</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.ContentArea.Bottom.CornerRadius">4,4,4,0</CornerRadius>
+    <Dock x:Key="Breeze::Global.TabControl.TabStrip.DefaultPlacement">Top</Dock>
+    <x:Double x:Key="Breeze::Global.TabControl.TabStrip.ItemSpacing">0</x:Double>
+    <CornerRadius x:Key="Breeze::Global.TabControl.TabStrip.Left.CornerRadius">5,0,0,5</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.TabStrip.Top.CornerRadius">5,5,0,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.TabStrip.Right.CornerRadius">0,5,5,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabControl.TabStrip.Bottom.CornerRadius">0,0,5,5</CornerRadius>
+    <Thickness x:Key="Breeze::Global.TabControlTabStrip.Horizontal.Padding">0</Thickness>
+    <Thickness x:Key="Breeze::Global.TabControl.TabStrip.Vertical.Padding">0</Thickness>
+    
+    <x:Double x:Key="Breeze::Global.TabItem.SelectionIndicatorThickness">3</x:Double>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Left.SelectedCornerRadius">5,0,0,5</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Top.SelectedCornerRadius">5,5,0,0</CornerRadius>
+    
+    <CornerRadius x:Key="Breeze::Global.TabItem.Left.StartUnselectedCornerRadius">5,0,0,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Left.EndUnselectedCornerRadius">0,0,0,5</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Top.StartUnselectedCornerRadius">5,0,0,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Top.EndUnselectedCornerRadius">0,5,0,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Right.StartUnselectedCornerRadius">0,5,0,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Right.EndUnselectedCornerRadius">0,0,5,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Bottom.StartUnselectedCornerRadius">0,0,0,5</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Bottom.EndUnselectedCornerRadius">0,0,5,0</CornerRadius>
+    
+    <CornerRadius x:Key="Breeze::Global.TabItem.Right.SelectedCornerRadius">0,5,5,0</CornerRadius>
+    <CornerRadius x:Key="Breeze::Global.TabItem.Bottom.SelectedCornerRadius">0,0,5,5</CornerRadius>
+    
     <CornerRadius x:Key="Breeze::Global.Window.BorderOnlyCornerRadius">7</CornerRadius>
 </ResourceDictionary>

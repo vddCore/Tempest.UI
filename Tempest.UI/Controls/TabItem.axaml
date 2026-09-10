@@ -1,0 +1,275 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ControlTheme x:Key="{x:Type TabItem}" TargetType="TabItem">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource Breeze::Button.ForegroundNormal}" />
+        <Setter Property="Padding" Value="16,5" />
+        <Setter Property="MinHeight" Value="28" />
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Border Name="PART_LeftHoverOutsideUnderlay"
+                            Margin="-4,0,0,0"
+                            HorizontalAlignment="Left"
+                            Background="{DynamicResource Breeze::Shared.Accent.20}"
+                            IsHitTestVisible="False"
+                            Width="4"
+                            Opacity="0" />
+                    
+                    <Border Name="PART_RightHoverOutsideUnderlay"
+                            Margin="0,0,-4,0"
+                            HorizontalAlignment="Right"
+                            Background="{DynamicResource Breeze::Shared.Accent.20}"
+                            IsHitTestVisible="False"
+                            Width="4"
+                            Opacity="0" />
+
+                    <Panel>
+                        <Border ClipToBounds="True"
+                                CornerRadius="{TemplateBinding CornerRadius}">
+                            <Panel Background="Transparent">
+                                <Border Name="PART_UnselectedPlate"
+                                        Background="{DynamicResource Breeze::View.BackgroundNormal}"
+                                        Opacity="0"
+                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                        IsHitTestVisible="False">
+                                    <Border.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity"
+                                                              Duration="0:0:0.150"
+                                                              Easing="CubicEaseOut" />
+                                        </Transitions>
+                                    </Border.Transitions>
+                                </Border>
+
+                                <Border Name="PART_HoverPlate"
+                                        Background="{DynamicResource Breeze::Shared.Accent.20}"
+                                        Opacity="0"
+                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                        IsHitTestVisible="False">
+                                    <Border.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity"
+                                                              Duration="0:0:0.150"
+                                                              Easing="CubicEaseOut" />
+                                        </Transitions>
+                                    </Border.Transitions>
+                                </Border>
+
+                                <Border Name="PART_SelectedCard"
+                                        Background="{DynamicResource Breeze::Window.BackgroundNormal}"
+                                        BorderBrush="{DynamicResource Breeze::Shared.Border}"
+                                        BorderThickness="1,1,1,0"
+                                        Opacity="0"
+                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                        IsHitTestVisible="False">
+                                    <Border.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity"
+                                                              Duration="0:0:0.150"
+                                                              Easing="CubicEaseOut" />
+                                        </Transitions>
+                                    </Border.Transitions>
+                                </Border>
+
+                                <Border Name="PART_TopAccentStripe"
+                                        Height="{DynamicResource Breeze::Global.TabItem.SelectionIndicatorThickness}"
+                                        VerticalAlignment="Top"
+                                        Background="{DynamicResource Breeze::Shared.Accent.60}"
+                                        Opacity="0"
+                                        CornerRadius="{TemplateBinding CornerRadius}"
+                                        IsHitTestVisible="False">
+                                    <Border.Transitions>
+                                        <Transitions>
+                                            <DoubleTransition Property="Opacity"
+                                                              Duration="0:0:0.180"
+                                                              Easing="CubicEaseOut" />
+                                        </Transitions>
+                                    </Border.Transitions>
+                                </Border>
+                            </Panel>
+                        </Border>
+
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                          Content="{TemplateBinding Header}"
+                                          ContentTemplate="{TemplateBinding HeaderTemplate}"
+                                          Padding="{TemplateBinding Padding}"
+                                          RecognizesAccessKey="True"
+                                          HorizontalAlignment="Center" />
+                    </Panel>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:not(:selected) /template/ Border#PART_UnselectedPlate">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:not(:selected):pointerover /template/ Border#PART_UnselectedPlate">
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+
+        <Style Selector="^:not(:selected):pointerover /template/ Border#PART_HoverPlate">
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+
+        <Style Selector="^:not(:selected):pointerover /template/ Border#PART_LeftHoverOutsideUnderlay">
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+
+        <Style Selector="^:not(:selected):pointerover /template/ Border#PART_RightHoverOutsideUnderlay">
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Left]:not(:selected):nth-child(1)">
+            <Setter Property="CornerRadius" 
+                    Value="{DynamicResource Breeze::Global.TabItem.Left.StartUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Left]:not(:selected):nth-last-child(1)">
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Left.EndUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Top]:not(:selected):nth-child(1)">
+            <Setter Property="CornerRadius" 
+                    Value="{DynamicResource Breeze::Global.TabItem.Top.StartUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Top]:not(:selected):nth-last-child(1)">
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Top.EndUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Right]:not(:selected):nth-child(1)">
+            <Setter Property="CornerRadius" 
+                    Value="{DynamicResource Breeze::Global.TabItem.Right.StartUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Right]:not(:selected):nth-last-child(1)">
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Right.EndUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Bottom]:not(:selected):nth-child(1)">
+            <Setter Property="CornerRadius" 
+                    Value="{DynamicResource Breeze::Global.TabItem.Bottom.StartUnselectedCornerRadius}" />
+        </Style>
+        
+        <Style Selector="^[TabStripPlacement=Bottom]:not(:selected):nth-last-child(1)">
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Bottom.EndUnselectedCornerRadius}" />
+        </Style>
+
+        <Style Selector="^:selected">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="ZIndex" Value="2" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Left]:selected">
+            <Setter Property="Margin"
+                    Value="0,0,-1,0" />
+
+            <Setter Property="ZIndex" Value="2" />
+
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Left.SelectedCornerRadius}" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Left]:selected /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Margin" Value="0,0,1,0" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Top]:selected">
+            <Setter Property="Margin"
+                    Value="0,0,0,-1" />
+
+            <Setter Property="ZIndex" Value="2" />
+
+
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Top.SelectedCornerRadius}" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Top]:selected /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Margin" Value="0,0,0,1" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Right]:selected">
+            <Setter Property="Margin"
+                    Value="-1,0,0,0" />
+
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Right.SelectedCornerRadius}" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Right]:selected /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Margin" Value="1,0,0,0" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Bottom]:selected">
+            <Setter Property="Margin" Value="0,-1,0,0" />
+
+            <Setter Property="CornerRadius"
+                    Value="{DynamicResource Breeze::Global.TabItem.Bottom.SelectedCornerRadius}" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Bottom]:selected /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Margin"
+                    Value="0,1,0,0" />
+        </Style>
+
+        <Style Selector="^:selected /template/ Border#PART_SelectedCard">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:selected /template/ Border#PART_TopAccentStripe">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{DynamicResource Breeze::Global.Shared.DisabledControlOpacity}" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Left] /template/ Border#PART_TopAccentStripe">
+            <Setter Property="Width" Value="{DynamicResource Breeze::Global.TabItem.SelectionIndicatorThickness}" />
+            <Setter Property="Height" Value="NaN" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Left] /template/ Border#PART_SelectedCard">
+            <Setter Property="BorderThickness" Value="1,1,0,1" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Top] /template/ Border#PART_TopAccentStripe">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Right] /template/ Border#PART_SelectedCard">
+            <Setter Property="BorderThickness" Value="1,1,1,0" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Right] /template/ Border#PART_TopAccentStripe">
+            <Setter Property="Width" Value="{DynamicResource Breeze::Global.TabItem.SelectionIndicatorThickness}" />
+            <Setter Property="Height" Value="NaN" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Right] /template/ Border#PART_SelectedCard">
+            <Setter Property="BorderThickness" Value="0,1,1,1" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Bottom] /template/ Border#PART_TopAccentStripe">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Bottom" />
+        </Style>
+
+        <Style Selector="^[TabStripPlacement=Bottom] /template/ Border#PART_SelectedCard">
+            <Setter Property="BorderThickness" Value="1,0,1,1" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
